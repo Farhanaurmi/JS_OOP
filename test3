@@ -1,0 +1,18 @@
+//promise
+
+
+const work = new Promise((resolve, reject)=>
+                         { var x=10;
+                          try{
+                             if(x>5){
+                                resolve(`the number is ${x}`);
+                             }}
+
+                          catch(err){
+                               reject(`the number is less than 5 ${err}`);}
+
+                          finally{
+                               console.log("bye!");}});
+
+
+work.then((res)=>{console.log(res);}).catch((res)=>{console.log(res);});
