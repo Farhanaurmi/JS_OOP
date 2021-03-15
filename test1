@@ -1,0 +1,41 @@
+class MainCopy{
+
+constructor(name, id, number, cgpa){
+     this.name=name;
+     this.id=id;
+     this._number=number;
+     this.cgpa=cgpa;
+
+}
+
+ waver() {
+ var cgpa=this.cgpa;
+  if(cgpa==4){return "75%";}
+  else if(cgpa>=3){return "35%";}
+  else if(cgpa>=2){return "15%";}
+}
+
+get number(){
+   return this._number;
+}
+
+set number(newnumber){
+   this._number=newnumber;
+}
+
+info(){
+  console.log(`Name=${this.name}\n Id=${this.id} \n CGPA=${this.cgpa}`);
+}
+
+}
+
+
+var obj1=new MainCopy("urmi", 685, 01953008051, 3.23);
+var obj2=new MainCopy("tanmoy", 2657, 01782660085, 3.80);
+obj1.info();
+console.log(obj1.waver());
+console.log(obj1.number);
+obj2.info();
+console.log(obj2.waver());
+obj2.number=01782668085;
+console.log(obj2.number);
