@@ -1,0 +1,21 @@
+class Math{
+    
+   constructor(arr){
+       this.arr=arr;
+   }
+   
+   even(){
+   var ev=this.arr.map((x)=>{ return x%2==0;});
+   for(var i=0;i<4;i++){
+   if(ev[i]==true){
+       document.write("even!!");
+   }
+   else{
+       document.write("odd!!");
+   }
+   }
+   }
+
+}
+var obj1=new Math([10,1,2,3]);
+obj1.even();
